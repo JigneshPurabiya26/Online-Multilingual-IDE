@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Karo naaa !</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            background-color: #000422;
+        }
+        .containerBtn {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            perspective: 800px;
+        }
+
+        .card {
+            height: 500px;
+            width: 390px;
+            position: relative;
+        }
+
+        .front, .back {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.12);
+            border: 2px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            color: #00ff96;
+            text-shadow: 1px 1px 8px black;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            transition: 1s;
+        }
+        /* SignUp */
+        .back {
+            /* justify-content: space-around; */
+            justify-content: center;
+            flex-direction: column;
+            transform: rotateY(180deg);
+        }
+
+        /* Login */
+        .front {
+            flex-direction: column;
+            justify-content: center;
+        }
+        .log {
+            font-size: 1.2rem;
+            margin: 1rem;
+            padding: 0rem 2rem;
+        }
+        .log input{
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+        #password1{
+            width: 100%;
+        }
+        #Email{
+            width: 100%;
+        }
+        .google{
+            font-size: 1.2rem;
+            margin: 1rem;
+            text-align: center;
+        }
+        .google div{
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        .google span{
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+        .google span i{
+            color: blue;
+        }
+        #googleLog img{
+            width: 20px;
+            height: 20px;
+        }
+        #googleSign img{
+            width: 20px;
+            height: 20px;
+        }
+
+        .loginBtn{
+            display: flex;
+            justify-content: center;
+            margin: 1rem;
+        }
+        .btnLogin{
+            color: #000000;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            width: 8rem;
+            background-color: #00ff96;
+            border-radius: 10px;
+            box-sizing: border-box;
+            box-shadow: 0 0 6px cyan;
+        }
+        .goBack{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .goBack a {
+            color: green;
+            font-size: 30px;
+        }
+        .goBack a:active{
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerBtn">
+        <div class="card">
+            <form action="" class="front">
+                <h1>Login</h1>
+                <div class="log loginName">
+                    <label for="Email">Email ID :</label>
+                    <input type="email" id="Email" placeholder="We'll never share your email with anyone else">
+                </div>
+                <div class="log loginPass">
+                    <label for="password1">Password :</label>
+                    <input type="password" id="password1" placeholder="Must be 8-20 characters long.">
+                </div>
+                <!-- <div class="log loginCheck">
+                    <input type="checkbox" id="Check1">
+                    <label for="Check1">Check me out</label>
+                </div> -->
+                <div class="loginBtn">
+                    <!-- <button type="submit" class="btnLogin">Login</button> -->
+                    <button class="btnLogin">Login</button>
+                    <!-- <button id="signPage" class="btnLogin">Sign up</button> -->
+                </div>
+                <div class="google">
+                    <div>OR</div>
+                    <span id="googleLog"><img src="../images/google.png" alt="G"> Sign up With Google</span>
+                </div>
+                <div class="goBack"><a href="Homepage.html"><i class="fas fa-arrow-left"></i></a></div>
+            </form>
+
+            <!-- back side -->
+            <form action="" class="back">
+                <h1>Sign Up</h1>
+                <div class="log loginName">
+                    <label for="Email">Email ID :</label>
+                    <input type="email" id="Email" placeholder="We'll never share your email with anyone else">
+                </div>
+                <div class="log loginPass">
+                    <label for="password1">Password :</label>
+                    <input type="password" id="password1" placeholder="Must be 8-20 characters long.">
+                </div>
+                <div class="log loginPass">
+                    <label for="password1">Confirm :</label>
+                    <input type="password" id="password1" placeholder="Re-Enter your password">
+                </div>
+                <div class="loginBtn">
+                    <button class="btnLogin">Create</button>
+                    <!-- <button id="LoginPage" class="btnLogin">Login</button> -->
+                </div>
+                <div class="google">
+                    <div>OR</div>
+                    <span id="googleSign"><img src="../images/google.png" alt="G"> Log in With Google</span>
+                </div>
+                <!-- <div class="goBack"><a href="Homepage.html"><i class="fas fa-arrow-left"></i></a></div> -->
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let swith1 = document.getElementById('googleLog')
+        swith1.addEventListener('click', switchKaroLog);
+        function switchKaroLog(e) {
+            front = document.querySelector('.front');
+            back = document.querySelector('.back');
+            front.style.transform = 'rotateY(-180deg)';
+            back.style.transform = 'rotateY(0deg)';
+        };
+        
+        let swith2 = document.getElementById('googleSign')
+        swith2.addEventListener('click', switchKaroSign);
+        function switchKaroSign (e) {
+            front = document.querySelector('.front');
+            back = document.querySelector('.back');
+            back.style.transform = 'rotateY(-180deg)';
+            front.style.transform = 'rotateY(0deg)';
+        };
+    </script>
+</body>
+
+</html>

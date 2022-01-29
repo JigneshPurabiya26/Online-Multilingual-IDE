@@ -1,0 +1,57 @@
+*{margin: 0;}
+
+.navbar{
+    background-color: #272822;
+}
+.navbar a{
+    color: white;
+}
+#editor{
+    height: 60vh;  
+}
+#output{
+    padding: 4px;
+    border-top: 1px solid black;
+    min-height: 30vh;
+    resize: none;
+}
+#sizeText{
+    width: 65px;
+    border-radius: 8px;
+}
+.nav-item{
+    margin: 0px 10px;
+}
+.equal{
+    margin-top: 6px;
+}
+#themes, #languages{
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+.btn{
+    padding: 0 10px;
+    margin-top: 6px;
+}
+
+select{
+    color: white;
+    background-color: black;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+select option { 
+    color: white;
+    background-color: black;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+select option:hover{ 
+    color: black;
+    background-color: white;
+}
+
+.sideme{
+    position: absolute;
+    right: 7px;
+}

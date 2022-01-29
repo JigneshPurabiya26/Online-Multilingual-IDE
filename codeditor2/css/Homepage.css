@@ -1,0 +1,225 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+  /* color: whitesmoke; */
+}
+.bodytop::before{
+  background: url(" ") no-repeat center center/cover;
+}
+.hn h4{
+  position: absolute;
+  left: 35px;
+  top: 15px;
+  font-size: 24px;
+  color: whitesmoke;
+}
+.hn h4:hover{
+  color: cyan;
+}
+.hn {
+  background-color: black;
+  display: flex;
+  justify-content: right;
+  padding: 10px;
+}
+.hn a {
+  padding: 10px 20px 10px;
+  color: whitesmoke;
+  text-decoration: none;
+  border-right: 2px solid #1e1e1e;
+  /* transform: 2s; */
+  /* font-weight: bold; */
+}
+.hn a:hover {
+  /* text-decoration: underline; */
+  color: cyan;
+  background: #1e1e1e;
+  border-bottom: 3px solid;
+  /* font-size: 20px; */
+}
+.bodytop::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  /* z-index: -1; */
+  height: 100%;
+  /* background: url("../images/1st\ image.jpeg") no-repeat center center/cover; */
+  opacity: 0.9;
+  /* top: 50px; */
+  left: 0px;
+}
+.ch{
+  background: black;
+  height: 58px;
+}
+.ch .sidebar.show {
+  right: 0px;
+}
+.ch .sidebar {
+  position: fixed;
+  background-color: black;
+  user-select: none;
+  right:-250px;
+  height: 31pc;
+  width: 210px;
+  margin-right: 0px;
+  transition: left 0.4s ease;
+  z-index: 2;
+}
+.ch .sidebar .ul2 {
+  padding: 70px 0px 0px 0px;
+  width: 230px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  list-style: none;
+}
+.ch .sidebar .ul2 .sb a {
+  color: whitesmoke;
+  display: block;
+  line-height: 70px;
+  padding-left: 10px;
+  width: 195px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ch .ul2 .sb a:hover {
+  color: cyan;
+  border-right: 3px solid;
+
+  background: #1e1e1e;
+}
+.ch .sidebar .sb a .fas {
+  margin-left: 8px;
+  width: 30px;
+}
+.ch .btn {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  height: 45px;
+  width: 45px;
+  /* background: #1b1b1b; */
+  text-align: center;
+  border-radius: 3px;
+  transition: right 0.4s ease;
+  cursor: pointer;
+}
+.ch .btn.click {
+  right: 210px;
+  top: 0px;
+}
+.ch .btn span {
+  color: whitesmoke;
+  font-size: 28px;
+  line-height: 45px;
+}
+.ch .btn.click span::before {
+  content: "\f00d";
+}
+.ch .btn span:hover {
+  color: cyan;
+}
+.ch .ul1{
+  padding:10px;
+  /* margin: 0px; */
+  float: left;
+  margin-left: 30px;
+  
+}
+.ch .ul1 button{
+  background: cyan;
+  color: black;
+  border: 2px solid black;
+  padding: 5px;
+  margin: 0px 15px 0px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.ch .ul1 button .fas{
+  color: black;
+}
+.ch .ul1 button:hover{
+  /* border:2px solid black; */
+  cursor: pointer;
+}
+.ch .ul1 li{
+  background: black;
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  z-index: 60;
+}
+.ch .ul1 li a{
+  display: block;
+  padding: 7px 20px;
+  line-height: 20px;
+  text-decoration: none;
+  color: whitesmoke;
+  height: 15px;
+}
+.ch .ul1 li a:hover{
+  background: #1e1e1e;
+  border-bottom: 2px solid cyan;
+}
+.ch .ul1 ul{
+  position: absolute;
+  top: 35px;
+  padding: 5px;
+  display: none;
+}
+.ch .ul1 li:hover> ul{
+  display: block;
+}
+.ch .ul1 #ul li{
+  width: 83px;
+  height: 2.7pc;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+.ch .ul1 #ul li a{
+  text-align: left;
+  padding: 4px;
+}
+.ch .ul1 #u2 li{
+  width: 163px;
+  height: 2.7pc;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+.ch .ul1 #u2 li a{
+  text-align: center;
+  padding-top: 4px;
+} 
+.ch .ul1 label{
+  color: whitesmoke;
+}
+.ch .ul1 select{
+  background: black;
+  color: whitesmoke;
+  font-size: 16px;
+  padding: 5px;
+  border: cyan;
+  line-height: 20px;
+}
+  /* editor css starts from here */
+#editor{
+  height: 400px;
+  margin-top: 0px;
+  width: 100%;
+}
+.output{
+  padding: 4px;
+  border: 1px solid gray;
+  min-height: 200px;
+  width: 99%;
+  resize: none;
+}
+/* .navbar .container .navbar-brand a:hover{
+  color: cyan;
+} */
+
